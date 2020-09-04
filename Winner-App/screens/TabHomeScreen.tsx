@@ -6,15 +6,27 @@ import { Text, View } from '../components/Themed';
 
 export default function TabOneScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Rede feita pra VOCÊ</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
-    </View>
+    <>
+      <View style={[styles.wrapper]} >
+        <Text style={styles.title}>Bem-Vinda a Winner Share</Text>
+      </View>
+      <View style={styles.container}>
+        <Text style={styles.title}>Tab HOME</Text>
+        <View
+          style={styles.separator}
+          lightColor="#eee"
+          darkColor="rgba(255,255,255,0.1)"
+        />
+        <EditScreenInfo path="/screens/TabOneScreen.tsx" />
+      </View>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
+  wrapper: {
+
+  },
   container: {
     flex: 1,
     alignItems: 'center',
