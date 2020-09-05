@@ -7,6 +7,10 @@ import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
 
+import CategoryScreen from '../screens/CategoryScreen';
+import DetailCategoryScreen from '../screens/DetailCategoryScreen';
+
+
 import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList } from '../types';
 import BottomTabNavigator from './BottomTabNavigator';
@@ -35,12 +39,20 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Root" component={BottomTabNavigator} />
+    <Stack.Navigator screenOptions={{ headerShown: true }}>
+      <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
       <Stack.Screen
         name="NotFound"
         component={NotFoundScreen}
-        options={{ title: 'Oops!' }}
+        options={{ title: 'Oops!', headerShown: false }}
+      />
+      <Stack.Screen
+        name="Category"
+        component={CategoryScreen}
+      />
+      <Stack.Screen
+        name="DetailCategory"
+        component={DetailCategoryScreen}
       />
     </Stack.Navigator>
   );

@@ -10,37 +10,36 @@ export default function EditScreenInfo({ path }: { path: string }) {
   return (
     <View>
       <View style={styles.getStartedContainer}>
-        <Text
+        {/* <Text
           style={styles.getStartedText}
-          lightColor={Colors.light.primary}
-          darkColor={Colors.dark.primary}
+          lightColor={Colors.light.gray}
+          darkColor={Colors.dark.gray}
         >
-          Open up the code for this screen:
-        </Text>
-
+          Quer contribuir com textos informativos?
+        </Text> */}
+        {/* 
         <View
           style={[styles.codeHighlightContainer, styles.homeScreenFilename]}
           darkColor="rgba(255,255,255,0.05)"
           lightColor="rgba(0,0,0,0.05)"
         >
           <MonoText>{path}</MonoText>
-        </View>
+        </View> */}
 
         <Text
           style={styles.getStartedText}
-          lightColor={Colors.light.primary}
-          darkColor={Colors.dark.primary}
+          lightColor={Colors.light.gray}
+          darkColor={Colors.dark.gray}
         >
-          Change any of the text, save the file, and your app will automatically
-          update.
+          “We act as though comfort and luxury were the chief requirements of life,
+          when all that we need to make us happy is something to be enthusiastic about.”
         </Text>
       </View>
 
       <View style={styles.helpContainer}>
         <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
           <Text style={styles.helpLinkText} lightColor={Colors.light.tint}>
-            Tap here if your app doesn't automatically update after making
-            changes
+            ALBERT EINSTEIN
           </Text>
         </TouchableOpacity>
       </View>
@@ -82,7 +81,19 @@ const styles = StyleSheet.create({
   },
   getStartedContainer: {
     alignItems: 'center',
-    marginHorizontal: 50,
+    padding: 20,
+    marginHorizontal: 20,
+    backgroundColor: '#597878',
+    borderRadius: 20,
+
+    shadowColor: '#743c7a',
+    elevation: 4,
+    shadowOpacity: 0.50,
+    shadowRadius: 1.41,
+    shadowOffset: {
+      height: 1,
+      width: 2,
+    }
   },
   homeScreenFilename: {
     marginVertical: 7,
