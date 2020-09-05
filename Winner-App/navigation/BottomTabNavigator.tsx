@@ -32,7 +32,7 @@ export default function BottomTabNavigator() {
           tabBarIcon: ({ color }) => (
             <TabBarIcon name="ios-code" color={color} />
           ),
-          title: 'Informe-se'
+          title: 'Conteúdo'
         }}
       />
       <BottomTab.Screen
@@ -42,7 +42,7 @@ export default function BottomTabNavigator() {
           tabBarIcon: ({ color }) => (
             <TabBarIcon name="ios-code" color={color} />
           ),
-          title: 'Contribue'
+          title: 'Rede'
         }}
       />
       <BottomTab.Screen
@@ -52,7 +52,7 @@ export default function BottomTabNavigator() {
           tabBarIcon: ({ color }) => (
             <TabBarIcon name="ios-code" color={color} />
           ),
-          title: 'Receba'
+          title: 'Perfil'
 
         }}
       />
