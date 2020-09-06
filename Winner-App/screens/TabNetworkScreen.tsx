@@ -44,7 +44,7 @@ const TabNetworkScreen: React.FC<Props> = ({ navigation }) => {
     },
   ])
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <ScrollView>
 
         <View style={{ paddingHorizontal: 20, paddingTop: 30 }} >
@@ -82,7 +82,7 @@ const TabNetworkScreen: React.FC<Props> = ({ navigation }) => {
         ))}
 
       </ScrollView >
-    </SafeAreaView >
+    </View >
   );
 }
 
@@ -111,6 +111,8 @@ const styles = StyleSheet.create({
     marginBottom: 8,
     shadowColor: '#9999',
     elevation: 2,
+    marginHorizontal: 20,
+
     shadowOpacity: 0.50,
     shadowRadius: 1.41,
     shadowOffset: {
@@ -120,7 +122,7 @@ const styles = StyleSheet.create({
   },
   back: {
     backgroundColor: '#fff',
-    marginHorizontal: 20,
+    //marginHorizontal: 20,
     borderRadius: 20,
     paddingHorizontal: 22,
     marginTop: 15,
@@ -139,6 +141,7 @@ const styles = StyleSheet.create({
     color: Colors.light.primary,
     fontWeight: 'bold',
     fontFamily: 'Grandstander',
+    paddingBottom: 20
   },
   buttonText: {
     fontSize: 18,
