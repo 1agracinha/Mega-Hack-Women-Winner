@@ -93,7 +93,7 @@ const  HomeScreen: React.FC<Props> = ({ navigation }) => {
              borderColor: "#d9e5f2", 
              borderWidth: 3
             }]}>
-              <Text style={styles.context}>Matemática</Text>
+              <Text style={styles.context}>News</Text>
               <View style={styles.barra} />
             </View>
 
@@ -101,7 +101,7 @@ const  HomeScreen: React.FC<Props> = ({ navigation }) => {
              borderColor: "#d9e5f2", 
              borderWidth: 3
             }]}>
-              <Text style={styles.context}>Calcule seus gastos</Text>
+              <Text style={styles.context}>Gastos</Text>
               <View style={styles.barra} />
             </View>
 
@@ -144,17 +144,17 @@ const  HomeScreen: React.FC<Props> = ({ navigation }) => {
           <View style={styles.smallCardView} >
 
             <View style={styles.smallCard}>
-              <Text style={styles.context}>Matemática</Text>
+              <Text style={styles.context}>News</Text>
               <View style={styles.barra} />
             </View>
 
             <View style={styles.smallCard}>
-              <Text style={styles.context}>Calcule seus gastos</Text>
+              <Text style={styles.context}>Gastos</Text>
               <View style={styles.barra} />
             </View>
 
             <View style={styles.smallCard}>
-              <Text style={styles.context}> Mais . . .</Text>
+              <Text style={styles.context}> . . .</Text>
               <View style={styles.barra} />
             </View>
 
@@ -186,12 +186,12 @@ const  HomeScreen: React.FC<Props> = ({ navigation }) => {
           <View style={styles.smallCardView} >
 
             <View style={styles.smallCard}>
-              <Text style={styles.context}>Matemática</Text>
+              <Text style={styles.context}>News</Text>
               <View style={styles.barra} />
             </View>
 
             <View style={styles.smallCard}>
-              <Text style={styles.context}>Calcule seus gastos</Text>
+              <Text style={styles.context}>Gastos</Text>
               <View style={styles.barra} />
             </View>
 
@@ -227,12 +227,12 @@ const  HomeScreen: React.FC<Props> = ({ navigation }) => {
           <View style={styles.smallCardView} >
 
             <View style={styles.smallCard}>
-              <Text style={styles.context}>Matemática</Text>
+              <Text style={styles.context}>News</Text>
               <View style={styles.barra} />
             </View>
 
             <View style={styles.smallCard}>
-              <Text style={styles.context}>Calcule seus gastos</Text>
+              <Text style={styles.context}>Gastos</Text>
               <View style={styles.barra} />
             </View>
 
@@ -470,45 +470,44 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: 'column',
     width: '70%',
-    backgroundColor: "#fff",
+    //backgroundColor: "#7c7cb9",
     marginBottom: 10,
     marginRight: 10,
     borderRadius: 20,
     maxHeight: 250,
     padding: 20,
-    shadowColor: '#743c7a',
+    // shadowColor: '#743c7a',
 
-    shadowOpacity: 0.50,
-    shadowRadius: 1.41,
-    borderColor: "#87aaa7", 
-    borderWidth: 2,
-    shadowOffset: {
-      height: 1,
-      width: 2,
-    }
+    // shadowOpacity: 0.50,
+    // shadowRadius: 1.41,
+    borderColor: "#ffffff", 
+    borderWidth: 3,
+    // shadowOffset: {
+    //   height: 1,
+    //   width: 2,
+    // }
   },
   smallCard: {
-    backgroundColor: "#fff",
+    //backgroundColor: "#f5f5f5",
     padding: 10,
     marginBottom: 10,
     borderRadius: 20,
-    height: 60,
-    shadowColor: '#743c7a',
+    height: 70,
+    // shadowColor: '#743c7a',
 
-  shadowOpacity: 0.50,
-    shadowRadius: 1.41,
-    borderColor: "#87aaa7", 
-    borderWidth: 2,
-    shadowOffset: {
-      height: 1,
-      width: 2,
-    }
+  // shadowOpacity: 0.50,
+  //   shadowRadius: 1.41,
+    borderColor: "#fff", 
+     borderWidth: 3,
+  //   shadowOffset: {
+  //     height: 1,
+  //     width: 2,
+  //   }
   },
   smallCardView: {
     display: "flex",
     flexDirection: 'column',
-    width: '25%',
-      
+    width: '25%',   
   },
   barra: {
     marginVertical: 5,
