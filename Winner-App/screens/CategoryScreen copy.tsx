@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { StyleSheet, ScrollView, SafeAreaView, TouchableOpacity } from 'react-native';
 
-import EditScreenInfo from '../components/EditScreenInfo';
+import CardMotivation from '../components/CardMotivation';
 import { Text, View } from '../components/Themed';
-import Colors from '../constants/Colors'
+import Colors from '../constants/Colors';
 
+import { RouteProp } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../types'
 type ProfileScreenNavigationProp = StackNavigationProp<
@@ -12,24 +13,21 @@ type ProfileScreenNavigationProp = StackNavigationProp<
   'Root'
 >;
 
+type ProfileScreenRouteProp = RouteProp<RootStackParamList, 'Category'>;
+
 type Props = {
   navigation: ProfileScreenNavigationProp;
+  route: ProfileScreenRouteProp;
 };
 
-const CategoryScreen: React.FC<Props> = ({ navigation }) => {
+
+const CategoryScreen: React.FC<Props> = ({ route, navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
-        {/* <View style={[styles.wrapper2]} >
-          <Text style={styles.title}>Bem-vinda a ConnectApp!</Text>
-          <View style={styles.barra} />
-          <Text style={styles.context}>
-            Vamos fazer o que fazemos de melhor, compartilhar conhecimento e ajudar umas as outras.
-          </Text>
-        </View> */}
-
+        {console.log(route)}
         <View style={{ paddingHorizontal: 20, paddingTop: 30 }} >
-          <Text style={styles.title}> Categoria Marketing: </Text>
+          <Text style={styles.title}> Categoria Marketing: {route.key} </Text>
         </View>
 
         <View style={[styles.wrapper, styles.back]} >

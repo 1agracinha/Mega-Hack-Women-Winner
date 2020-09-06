@@ -1,7 +1,7 @@
 export type RootStackParamList = {
   Root: undefined;
   NotFound: undefined;
-  Category: undefined;
+  Category: { key: string, title: string };
   DetailCategory: undefined;
 };
 

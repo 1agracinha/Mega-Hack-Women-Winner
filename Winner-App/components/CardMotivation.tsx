@@ -3,36 +3,19 @@ import React from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
 
 import Colors from '../constants/Colors';
-import { MonoText } from './StyledText';
 import { Text, View } from './Themed';
 
-export default function EditScreenInfo({ path }: { path: string }) {
+export default function CardMotivation({ path }: { path: string }) {
   return (
     <View>
       <View style={styles.getStartedContainer}>
-        {/* <Text
-          style={styles.getStartedText}
-          lightColor={Colors.light.gray}
-          darkColor={Colors.dark.gray}
-        >
-          Quer contribuir com textos informativos?
-        </Text> */}
-        {/* 
-        <View
-          style={[styles.codeHighlightContainer, styles.homeScreenFilename]}
-          darkColor="rgba(255,255,255,0.05)"
-          lightColor="rgba(0,0,0,0.05)"
-        >
-          <MonoText>{path}</MonoText>
-        </View> */}
-
         <Text
           style={styles.getStartedText}
           lightColor={Colors.light.gray}
           darkColor={Colors.dark.gray}
         >
-          “We act as though comfort and luxury were the chief requirements of life,
-          when all that we need to make us happy is something to be enthusiastic about.”
+          “Agimos como se conforto e luxo fossem os principais requisitos da vida,
+          quando tudo o que precisamos para nos fazer felizes é algo para nos entusiasmar.”
         </Text>
       </View>
 
@@ -49,7 +32,7 @@ export default function EditScreenInfo({ path }: { path: string }) {
 
 function handleHelpPress() {
   WebBrowser.openBrowserAsync(
-    'https://docs.expo.io/get-started/create-a-new-app/#opening-the-app-on-your-phonetablet'
+    'https://pt.wikipedia.org/wiki/Albert_Einstein'
   );
 }
 

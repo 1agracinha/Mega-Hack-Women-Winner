@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, ScrollView, SafeAreaView, TouchableOpacity } from 'react-native';
 
-import EditScreenInfo from '../components/EditScreenInfo';
+import CardMotivation from '../components/CardMotivation';
 import { Text, View } from '../components/Themed';
 import Colors from '../constants/Colors'
 

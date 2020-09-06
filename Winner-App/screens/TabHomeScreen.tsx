@@ -1,7 +1,7 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, ScrollView, SafeAreaView, TouchableOpacity } from 'react-native';
 
-import EditScreenInfo from '../components/EditScreenInfo';
+import CardMotivation from '../components/CardMotivation';
 import { Text, View } from '../components/Themed';
 import Colors from '../constants/Colors'
 
@@ -13,7 +13,7 @@ type ProfileScreenNavigationProp = StackNavigationProp<
   'Root'
 >;
 
-interface Props  {
+interface Props {
   navigation: ProfileScreenNavigationProp;
 };
 
@@ -35,15 +35,107 @@ const renderItem = () => (
       <Text style={styles.title}>Topico 1</Text>
       <View style={styles.barra} />
     </View>
-    {/* <EditScreenInfo path="/screens/TabOneScreen.tsx" /> */}
+    {/* <CardMotivation path="/screens/TabOneScreen.tsx" /> */}
   </>
 )
 
-const  HomeScreen: React.FC<Props> = ({ navigation }) => {
+const HomeScreen: React.FC<Props> = ({ navigation }) => {
+  const [data, setData] = useState([
+    {
+      key: '1',
+      colorCard: '#d9e5f2',
+      content: 'As estratégias de marketing são fundamentais para dar visibilidade ao seu negócio atraindo novos clientes.  Encontre aqui materiais sobre marketing de conteúdo, funil de vendas,  assessoria de comunicação, e-mail marketing e muito mais.',
+      cardTitle1: "Tudo sobre Marketing",
+      cardContent1: "Se você tem duvidas sobre como montar o marketing do seu negócio, estamos aqui pra te ajudar...",
+      title: "Marketing",
+      image: "https://pikwizard.com/photos/woman-using-mobile-phone-near-window--df39295d5760bd890dd836aa616eea56-m.jpg",
+    },
+    {
+      key: '2',
+      colorCard: '#f0e1db',
+      content: 'A informalidade se torna um problema em algumas situações. Nesta área você vai compreender os diversos tipos de empresa, como fazer para formalizar a sua além de conhecer casos de quem já passou por isto....',
+      cardTitle1: "Formalize-se",
+      cardContent1: "A informalidade se torna um problema em algumas situações. Nesta área você vai compreender os diversos tipos de empresa, como fazer para formalizar a sua além de conhecer casos de quem já passou por isto....",
+      title: "Formalização",
+      image: "https://pikwizard.com/photos/woman-reading-newspaper-at-counter--abc05ecfd28ec224d5db0525db60a0da-m.jpg",
+    },
+    {
+      key: '3',
+      colorCard: '#e2ddee',
+      content: 'Vamos aprender a controlar as finanças no dia a dia.Separar bem o que é da empresa e o que é pessoal. Pagar tudo o que é devido e fazer aquela reserva para os momentos de emergência.',
+      cardTitle1: "Organize suas contas",
+      cardContent1: "Vamos aprender a controlar as finanças no dia a dia.Separar bem o que é da empresa e o que é pessoal.",
+      title: "Finanças",
+      image: "https://pikwizard.com/photos/woman-having-cup-of-coffee-at-caf%C3%A3%C2%A9--9c6db970b0999285faf5d95c231b3461-m.jpg",
+    },
+    {
+      key: '4',
+      colorCard: '#f0ecdb',
+      content: 'Na área jurídica o profissional lida com o contrato social, gestão de contratos de trabalho, conformidade de processos entre outros. Nesta área você vai encontrar materiais que te ajudarão a entender a necessidade e importância destes documentos.',
+      cardTitle1: "Ajuda Jurídica",
+      cardContent1: "Na área jurídica o profissional lida com o contrato social, gestão de contratos de trabalho,",
+      title: "Jurídico",
+      image: "https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    },
+    {
+      key: '5',
+      colorCard: '#ddedeb',
+      content: 'Cálculo e recolhimento de impostos, taxas devidas, balanço patrimonial, emissão de nota fiscal. A contratação do trabalho de um contador é fundamental em qualquer empresa mas, tem horas que a gente quer mesmo é entender melhor o trabalho que ele faz e quais as nossas obrigações.',
+      cardTitle1: "Suas Contas estão de dando dor de cabeça?",
+      cardContent1: "Cálculo e recolhimento de impostos, taxas devidas, balanço patrimonial, emissão de nota fiscal...",
+      title: "Contabilidade",
+      image: "https://pikwizard.com/photos/woman-using-mobile-phone-near-window--df39295d5760bd890dd836aa616eea56-m.jpg",
+    },
+    {
+      key: '6',
+      colorCard: '#d9e5f2',
+      content: 'As redes sociais também são excelentes ferramentas para registrarmos a nossa presença comercial.Você sabe como fazer um post para o Instagram? Já pensou em fazer uma divulgação patrocinada? Se não entende muito bem como tudo isto funciona, entre aqui!',
+      cardTitle1: "Saiba como usar as redes para alavancar seus negócios",
+      cardContent1: "As redes sociais também são excelentes ferramentas para registrarmos a nossa presença comercial....",
+      title: "Redes Sociais",
+      image: "https://pikwizard.com/photos/woman-reading-newspaper-at-counter--abc05ecfd28ec224d5db0525db60a0da-m.jpg",
+    },
+    {
+      key: '7',
+      colorCard: '#f0ecdb',
+      content: 'A pandemia escancarou um grande problema. Muitas empresas ainda não vendem pela internet. Precisa saber como abrir uma loja virtual? Aqui você vai descobrir.',
+      cardTitle1: "Qual sua loja virtual favorita?",
+      cardContent1: "A pandemia escancarou um grande problema. Muitas empresas ainda não vendem pela internet....",
+      title: "Loja virtual",
+      image: "https://pikwizard.com/photos/woman-having-cup-of-coffee-at-caf%C3%A3%C2%A9--9c6db970b0999285faf5d95c231b3461-m.jpg",
+    },
+    {
+      key: '8',
+      colorCard: '#e2ddee',
+      content: 'Investimento inicial, capital de giro. Às vezes o que falta para um negócio de sucesso é justamente o dinheiro. Aqui temos informações de algumas linhas de crédito e como fazer para acessá-las.',
+      cardTitle1: "Não tenho dinheiro, e agora?",
+      cardContent1: "Investimento inicial, capital de giro. Às vezes o que falta para um negócio de sucesso é...",
+      title: "Crédito",
+      image: "https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    },
+    {
+      key: '9',
+      colorCard: '#ddedeb',
+      content: 'E aquele dia em que você estava na rua e precisou daquele documento que deixou no computador do escritório? Os serviços de armazenamento em nuvem nos permitem fácil aceso aos documentos via internet e ainda viabilizam compartilhar o acesso com a equipe.',
+      cardTitle1: "Onde deixar meus dados?",
+      cardContent1: "E aquele dia em que você estava na rua e precisou daquele documento que deixou no computador do escritório? Se você tem duvidas sobre como montar o marketing do seu negócio, estamos aqui pra te ajudar...",
+      title: "Armazenamento em nuvem",
+      image: "https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    },
+    {
+      key: '10',
+      colorCard: '#d9e5f2',
+      content: 'Tecnologia é o conjunto de técnicas, habilidades, métodos e processos usados na produção de bens ou serviços, ou na realização objetivos, como por exemplo em investigações científicas. ',
+      cardTitle1: "Quer empreender em tecnologia? Chegue mais.",
+      cardContent1: "é o conjunto de técnicas, habilidades, métodos e processos usados na produção de bens ou serviços, ou na realização objetivos, como por exemplo em investigações científicas....",
+      title: "Tecnologia",
+      image: "https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    },
+  ])
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
-
+        {/* Boas Vindas!!! */}
         <View style={[styles.wrapper2]} >
           <Text style={styles.title}>Bem-vinda a ConnectApp!</Text>
           <View style={styles.barra} />
@@ -52,378 +144,65 @@ const  HomeScreen: React.FC<Props> = ({ navigation }) => {
           </Text>
         </View>
         <View style={{ paddingHorizontal: 20, paddingTop: 30 }} >
-          <Text style={styles.title}>Principais Assuntos: </Text>
+          <Text style={styles.title}> Principais Assuntos: </Text>
         </View>
-        
-    
 
-        {/* Marketing */}
-        <View style={[styles.wrapper, styles.back]} > 
-        <TouchableOpacity onPress={()=>{ navigation.navigate('Category')}}>
-          <Text style={styles.subtitle}>Marketing  ==3 </Text>
+        {/* Categorias disponíveis */}
+        {data.map((item) => (
+          <View key={item.key}>
 
-          <Text style={styles.context}>
-            As estratégias de marketing são fundamentais para dar
-            visibilidade ao seu negócio atraindo novos clientes.
-            Encontre aqui materiais sobre marketing de conteúdo, funil de vendas,
-            assessoria de comunicação, e-mail marketing e muito mais.
-        </Text>  
-        </TouchableOpacity>
-        </View>
-      
-        <View style={[styles.bloco]} >
-          <View style={[styles.bigCardView,{
-             borderColor: "#d9e5f2", 
-             borderWidth: 3
-            }]} >
-            <Text style={styles.title}>Meu marketing não existe.</Text>
-            <View style={styles.barra} />
-            <Text style={styles.context}>
-              Minhas finanças não estão indo bem.
-              Minhas finanças não estão indo bem.
-              Minhas finanças não estão indo bem.
-              Minhas finanças não estão indo bem.
-          
-          </Text>
+            <View style={[styles.wrapper, styles.back, { backgroundColor: item.colorCard }]} >
+              <TouchableOpacity onPress={() => { navigation.navigate('Category', { key: '199', title: "hoje gg" }) }}>
+                <Text style={styles.title}>{item.title}</Text>
 
+                <Text style={styles.context}>
+                  {item.content}
+                </Text>
+              </TouchableOpacity>
+            </View>
+
+            <View style={[styles.bloco]} >
+              <View style={[styles.bigCardView, {
+                borderColor: item.colorCard,
+                borderWidth: 3,
+              }]} >
+                <Text style={styles.subtitle}>{item.cardTitle1}</Text>
+                <View style={styles.barra} />
+                <Text style={styles.context}>
+                  {item.cardContent1}
+                </Text>
+              </View>
+
+              <View style={styles.smallCardView} >
+
+                <View style={[styles.smallCard, {
+                  borderColor: item.colorCard,
+                  borderWidth: 3
+                }]}>
+                  <Text style={styles.context}>News</Text>
+                  <View style={styles.barra} />
+                </View>
+
+                <View style={[styles.smallCard, {
+                  borderColor: item.colorCard,
+                  borderWidth: 3
+                }]}>
+                  <Text style={styles.context}>Gastos</Text>
+                  <View style={styles.barra} />
+                </View>
+
+                <View style={[styles.smallCard, {
+                  borderColor: item.colorCard,
+                  borderWidth: 3
+                }]}>
+                  <Text style={styles.context}> Mais . . .</Text>
+                  <View style={styles.barra} />
+                </View>
+
+              </View>
+            </View>
           </View>
-          <View style={styles.smallCardView} >
-
-            <View style={[styles.smallCard,{
-             borderColor: "#d9e5f2", 
-             borderWidth: 3
-            }]}>
-              <Text style={styles.context}>News</Text>
-              <View style={styles.barra} />
-            </View>
-
-            <View style={[styles.smallCard,{
-             borderColor: "#d9e5f2", 
-             borderWidth: 3
-            }]}>
-              <Text style={styles.context}>Gastos</Text>
-              <View style={styles.barra} />
-            </View>
-
-            <View style={[styles.smallCard,{
-             borderColor: "#d9e5f2", 
-             borderWidth: 3
-            }]}>
-              <Text style={styles.context}> Mais . . .</Text>
-              <View style={styles.barra} />
-            </View>
-
-          </View>
-        </View>
-        {/* <View style={styles.barra2} /> */}
-       
-   
-        {/* Formalização */}
-        <View style={[styles.back, { backgroundColor: '#f0e1db' }]} >
-          <Text style={styles.subtitle}> Formalização </Text>
-
-          <Text style={styles.context}>
-            A informalidade se torna um problema em algumas situações.
-            Nesta área você vai compreender os diversos tipos de empresa,
-            como fazer para formalizar a sua além de conhecer casos de
-            quem já passou por isto.
-          </Text>
-        </View>
-        <View style={[styles.bloco]} >
-          <View style={styles.bigCardView} >
-            <Text style={styles.title}>Minhas finanças não estão indo bem.</Text>
-            <View style={styles.barra} />
-            <Text style={styles.context}>
-              Minhas finanças não estão indo bem.
-              Minhas finanças não estão indo bem.
-              Minhas finanças não estão indo bem.
-   
-          </Text>
-
-          </View>
-          <View style={styles.smallCardView} >
-
-            <View style={styles.smallCard}>
-              <Text style={styles.context}>News</Text>
-              <View style={styles.barra} />
-            </View>
-
-            <View style={styles.smallCard}>
-              <Text style={styles.context}>Gastos</Text>
-              <View style={styles.barra} />
-            </View>
-
-            <View style={styles.smallCard}>
-              <Text style={styles.context}> . . .</Text>
-              <View style={styles.barra} />
-            </View>
-
-          </View>
-        </View>
-        {/* <View style={styles.barra2} /> */}
-        {/* Finanças */}
-        <View style={[styles.back, { backgroundColor: '#e2ddee' }]} >
-          <Text style={styles.subtitle}> Finanças </Text>
-
-          <Text style={[styles.context]}>
-            Vamos aprender a controlar as finanças no dia a dia.
-            Separar bem o que é da empresa e o que é pessoal.
-            Pagar tudo o que é devido e fazer aquela reserva para os
-            momentos de emergência.
-          </Text>
-        </View>
-        <View style={[styles.bloco]} >
-          <View style={styles.bigCardView} >
-            <Text style={styles.title}>Minhas finanças não estão indo bem.</Text>
-            <View style={styles.barra} />
-            <Text style={styles.context}>
-              Minhas finanças não estão indo bem.
-              Minhas finanças não estão indo bem.
-         
-          </Text>
-
-          </View>
-          <View style={styles.smallCardView} >
-
-            <View style={styles.smallCard}>
-              <Text style={styles.context}>News</Text>
-              <View style={styles.barra} />
-            </View>
-
-            <View style={styles.smallCard}>
-              <Text style={styles.context}>Gastos</Text>
-              <View style={styles.barra} />
-            </View>
-
-            <View style={styles.smallCard}>
-              <Text style={styles.context}> Mais . . .</Text>
-              <View style={styles.barra} />
-            </View>
-
-          </View>
-        </View>
-        {/* <View style={styles.barra2} /> */}
-        {/* Juridico */}
-        <View style={[styles.back, { backgroundColor: '#f0ecdb' }]} >
-          <Text style={styles.subtitle}>Jurídico </Text>
-
-          <Text style={[styles.context]}>
-            Na área jurídica o profissional lida com o contrato social,
-            gestão de contratos de trabalho, conformidade de processos entre outros. Nesta área você vai encontrar materiais que
-            te ajudarão a entender a necessidade e importância destes documentos.
-          </Text>
-        </View>
-        <View style={[styles.bloco]} >
-          <View style={styles.bigCardView} >
-            <Text style={styles.title}>Minhas finanças não estão indo bem.</Text>
-            <View style={styles.barra} />
-            <Text style={styles.context}>
-              Minhas finanças não estão indo bem.
-              Minhas finanças não estão indo bem.
-        
-          </Text>
-
-          </View>
-          <View style={styles.smallCardView} >
-
-            <View style={styles.smallCard}>
-              <Text style={styles.context}>News</Text>
-              <View style={styles.barra} />
-            </View>
-
-            <View style={styles.smallCard}>
-              <Text style={styles.context}>Gastos</Text>
-              <View style={styles.barra} />
-            </View>
-
-            <View style={styles.smallCard}>
-              <Text style={styles.context}> Mais . . .</Text>
-              <View style={styles.barra} />
-            </View>
-
-          </View>
-        </View>
-        {/* <View style={styles.barra2} /> */}
-
-        {/* Contabilidade */}
-        <View style={[styles.back, { backgroundColor: '#ddedeb' }]} >
-          <Text style={styles.subtitle}>Contabilidade </Text>
-
-          <Text style={[styles.context]}>
-            Cálculo e recolhimento de impostos, taxas devidas, balanço patrimonial,
-            emissão de nota fiscal. A contratação do trabalho de um contador é
-            fundamental em qualquer empresa mas, tem horas que a gente quer mesmo
-            é entender melhor o trabalho que ele faz e quais as nossas obrigações.
-          </Text>
-        </View>
-        <View style={[styles.bloco]} >
-          <View style={styles.bigCardView} >
-            <Text style={styles.title}>Topico 1</Text>
-            <View style={styles.barra} />
-          </View>
-          <View style={styles.smallCardView} >
-
-            <View style={styles.smallCard}>
-              <Text style={styles.title}>Topico 1</Text>
-              <View style={styles.barra} />
-            </View>
-
-            <View style={styles.smallCard}>
-              <Text style={styles.title}>Topico 1</Text>
-              <View style={styles.barra} />
-            </View>
-
-            <View style={styles.smallCard}>
-              <Text style={styles.title}>Topico 1</Text>
-              <View style={styles.barra} />
-            </View>
-
-          </View>
-        </View>
-        {/* <View style={styles.barra2} /> */}
-
-        {/* Redes Sociais */}
-        <View style={[styles.back, { backgroundColor: '#d9e5f2' }]} >
-          <Text style={styles.subtitle}> Redes Sociais </Text>
-
-          <Text style={[styles.context]}>
-            As redes sociais também são excelentes ferramentas para registrarmos a nossa presença comercial.
-            Você sabe como fazer um post para o Instagram? Já pensou em fazer uma divulgação patrocinada?
-            Se não entende muito bem como tudo isto funciona, entre aqui!
-          </Text>
-        </View>
-        <View style={[styles.bloco]} >
-          <View style={styles.bigCardView} >
-            <Text style={styles.title}>Topico 1</Text>
-            <View style={styles.barra} />
-          </View>
-          <View style={styles.smallCardView} >
-
-            <View style={styles.smallCard}>
-              <Text style={styles.title}>Topico 1</Text>
-              <View style={styles.barra} />
-            </View>
-
-            <View style={styles.smallCard}>
-              <Text style={styles.title}>Topico 1</Text>
-              <View style={styles.barra} />
-            </View>
-
-            <View style={styles.smallCard}>
-              <Text style={styles.title}>Topico 1</Text>
-              <View style={styles.barra} />
-            </View>
-
-          </View>
-        </View>
-        {/* <View style={styles.barra2} /> */}
-
-        {/* Loja virtual */}
-        <View style={[styles.back, { backgroundColor: '#f0ecdb' }]} >
-          <Text style={styles.subtitle}> Loja virtual </Text>
-
-          <Text style={[styles.context]}>
-            A pandemia escancarou um grande problema. Muitas empresas ainda não vendem pela internet.
-            Precisa saber como abrir uma loja virtual? Aqui você vai descobrir.
-          </Text>
-        </View>
-        <View style={[styles.bloco]} >
-          <View style={styles.bigCardView} >
-            <Text style={styles.title}>Topico 1</Text>
-            <View style={styles.barra} />
-          </View>
-          <View style={styles.smallCardView} >
-
-            <View style={styles.smallCard}>
-              <Text style={styles.title}>Topico 1</Text>
-              <View style={styles.barra} />
-            </View>
-
-            <View style={styles.smallCard}>
-              <Text style={styles.title}>Topico 1</Text>
-              <View style={styles.barra} />
-            </View>
-
-            <View style={styles.smallCard}>
-              <Text style={styles.title}>Topico 1</Text>
-              <View style={styles.barra} />
-            </View>
-
-          </View>
-        </View>
-        {/* <View style={styles.barra2} /> */}
-
-        {/* Crédito */}
-        <View style={[styles.back, { backgroundColor: '#e2ddee' }]} >
-          <Text style={styles.subtitle}> Crédito </Text>
-
-          <Text style={[styles.context]}>
-            Investimento inicial, capital de giro.
-            Às vezes o que falta para um negócio de sucesso é justamente o dinheiro.
-            Aqui temos informações de algumas linhas de crédito e como fazer para acessá-las.
-          </Text>
-        </View>
-        <View style={[styles.bloco]} >
-          <View style={styles.bigCardView} >
-            <Text style={styles.title}>Topico 1</Text>
-            <View style={styles.barra} />
-          </View>
-          <View style={styles.smallCardView} >
-
-            <View style={styles.smallCard}>
-              <Text style={styles.title}>Topico 1</Text>
-              <View style={styles.barra} />
-            </View>
-
-            <View style={styles.smallCard}>
-              <Text style={styles.title}>Topico 1</Text>
-              <View style={styles.barra} />
-            </View>
-
-            <View style={styles.smallCard}>
-              <Text style={styles.title}>Topico 1</Text>
-              <View style={styles.barra} />
-            </View>
-
-          </View>
-        </View>
-        {/* <View style={styles.barra2} /> */}
-
-        {/* Armazenamento em nuvem */}
-        <View style={[styles.back, { backgroundColor: '#ddedeb' }]} >
-          <Text style={styles.subtitle}> Armazenamento em nuvem </Text>
-
-          <Text style={[styles.context]}>
-            E aquele dia em que você estava na rua e precisou daquele documento que deixou no computador do escritório?
-            Os serviços de armazenamento em nuvem nos permitem fácil aceso aos documentos
-            via internet e ainda viabilizam compartilhar o acesso com a equipe.
-          </Text>
-        </View>
-        <View style={[styles.bloco]} >
-          <View style={styles.bigCardView} >
-            <Text style={styles.title}>Topico 1</Text>
-            <View style={styles.barra} />
-          </View>
-          <View style={styles.smallCardView} >
-
-            <View style={styles.smallCard}>
-              <Text style={styles.title}>Topico 1</Text>
-              <View style={styles.barra} />
-            </View>
-
-            <View style={styles.smallCard}>
-              <Text style={styles.title}>Topico 1</Text>
-              <View style={styles.barra} />
-            </View>
-
-            <View style={styles.smallCard}>
-              <Text style={styles.title}>Topico 1</Text>
-              <View style={styles.barra} />
-            </View>
-
-          </View>
-        </View>
-        {/* <View style={styles.barra2} /> */}
+        ))}
 
         {/* Mais assuntos por vim */}
         <View style={{ padding: 20 }} >
@@ -432,7 +211,7 @@ const  HomeScreen: React.FC<Props> = ({ navigation }) => {
           </Text>
           <View style={[styles.fullBarra, { alignSelf: 'center' }]} />
         </View>
-        <EditScreenInfo path="/screens/TabOneScreen.tsx" />
+        <CardMotivation path="/screens/TabOneScreen.tsx" />
 
       </ScrollView >
     </SafeAreaView>
@@ -446,7 +225,7 @@ const styles = StyleSheet.create({
     elevation: 4,
     shadowOpacity: 0.50,
     shadowRadius: 1.41,
-    borderColor: "#fff", 
+    borderColor: "#fff",
     borderWidth: 2,
     shadowOffset: {
       height: 1,
@@ -470,44 +249,28 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: 'column',
     width: '70%',
-    //backgroundColor: "#7c7cb9",
+    backgroundColor: "#fff",
     marginBottom: 10,
     marginRight: 10,
     borderRadius: 20,
     maxHeight: 250,
     padding: 20,
-    // shadowColor: '#743c7a',
-
-    // shadowOpacity: 0.50,
-    // shadowRadius: 1.41,
-    borderColor: "#ffffff", 
+    borderColor: "#eee",
     borderWidth: 3,
-    // shadowOffset: {
-    //   height: 1,
-    //   width: 2,
-    // }
   },
   smallCard: {
-    //backgroundColor: "#f5f5f5",
+    backgroundColor: "#fff",
     padding: 10,
     marginBottom: 10,
     borderRadius: 20,
     height: 70,
-    // shadowColor: '#743c7a',
-
-  // shadowOpacity: 0.50,
-  //   shadowRadius: 1.41,
-    borderColor: "#fff", 
-     borderWidth: 3,
-  //   shadowOffset: {
-  //     height: 1,
-  //     width: 2,
-  //   }
+    borderColor: "#eee",
+    borderWidth: 3,
   },
   smallCardView: {
     display: "flex",
     flexDirection: 'column',
-    width: '25%',   
+    width: '25%',
   },
   barra: {
     marginVertical: 5,
@@ -523,14 +286,6 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.dark.gray,
     borderRadius: 3,
   },
-   barra2: {
-    //marginVertical: 10,
-    width: '80%',
-    height: 2.5,
-    backgroundColor: '#e2ddee',
-    borderRadius: 3,
-    alignSelf: 'center'
-  },
   container: {
     flex: 1,
   },
@@ -539,9 +294,8 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     borderRadius: 20,
     padding: 20,
-    // marginVertical: 20,
     marginTop: 20,
-    borderColor: "#fff", 
+    borderColor: "#fff",
     borderWidth: 2,
   },
   title: {
@@ -551,18 +305,18 @@ const styles = StyleSheet.create({
     fontFamily: 'Grandstander',
   },
   subtitle: {
+    color: '#666',
     fontSize: 18,
-    // color: "#7369c1",
-    // marginBottom: 10,
-    fontWeight: '500',
+    fontWeight: '700',
     fontFamily: 'Grandstander',
   },
   context: {
     fontSize: 14,
-    color: "#1a172b",
-    fontWeight: '400',
+    color: "#444",
+    fontWeight: '500',
     marginTop: 10,
-    // fontFamily: 'Grandstander',
+    maxHeight: 99,
+    lineHeight: 23,
   },
   separator: {
     marginVertical: 30,

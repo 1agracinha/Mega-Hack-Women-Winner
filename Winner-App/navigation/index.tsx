@@ -49,6 +49,7 @@ function RootNavigator() {
       <Stack.Screen
         name="Category"
         component={CategoryScreen}
+        initialParams={{ key: '1', title: "Hoje" }}
       />
       <Stack.Screen
         name="DetailCategory"
