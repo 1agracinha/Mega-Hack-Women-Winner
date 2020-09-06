@@ -5,7 +5,7 @@ import * as React from 'react';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
-import TabOneScreen from '../screens/TabOneScreen';
+import TabNetworkScreen from '../screens/TabNetworkScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import TabHomeScreen from '../screens/TabHomeScreen';
 import {
@@ -75,9 +75,9 @@ function TabOneNavigator() {
   return (
     <TabOneStack.Navigator>
       <TabOneStack.Screen
-        name="TabOneScreen"
-        component={TabOneScreen}
-        options={{ headerTitle: 'Comtribua' }}
+        name="TabNetworkScreen"
+        component={TabNetworkScreen}
+        options={{ headerTitle: 'Rede' }}
       />
     </TabOneStack.Navigator>
   );
@@ -91,7 +91,7 @@ function TabTwoNavigator() {
       <TabTwoStack.Screen
         name="TabTwoScreen"
         component={TabTwoScreen}
-        options={{ headerTitle: 'Tab Two Title' }}
+        options={{ headerTitle: 'Perfil' }}
       />
     </TabTwoStack.Navigator>
   );
