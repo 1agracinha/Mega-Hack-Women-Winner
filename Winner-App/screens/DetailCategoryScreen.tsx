@@ -72,7 +72,7 @@ const DetailCategoryScreen: React.FC<Props> = ({ navigation }) => {
 
         <View style={[styles.container, { padding: 20 }]} >
           <Text style={styles.fonteText}>
-            Fonte: Job no Cafofo - Canal do YouTube
+            Fonte: Nikolas Sasso - Canal do YouTube
           </Text>
         </View>
 
