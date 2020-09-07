@@ -139,15 +139,19 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
             </View>
 
             <View style={[styles.bloco]} >
+
               <View style={[styles.bigCardView, {
                 borderColor: item.colorCard,
                 borderWidth: 3,
               }]} >
-                <Text style={styles.subtitle}>{item.cardTitle1}</Text>
-                <View style={styles.barra} />
-                <Text style={styles.context}>
-                  {item.cardContent1}
-                </Text>
+                <TouchableOpacity onPress={() => { navigation.navigate('DetailCategory') }}>
+                  <Text style={styles.subtitle}>{item.cardTitle1}</Text>
+                  <View style={styles.barra} />
+                  <Text style={styles.context}>
+                    {item.cardContent1}
+                  </Text>
+                </TouchableOpacity>
+
               </View>
 
               <View style={styles.smallCardView} >
@@ -171,8 +175,10 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
                   borderColor: item.colorCard,
                   borderWidth: 3
                 }]}>
-                  <Text style={styles.smallContext}> Mais . . .</Text>
-                  <View style={styles.smallBarra} />
+                  <TouchableOpacity onPress={() => { navigation.navigate('Category', { key: '0', title: "titulo" }) }}>
+                    <Text style={styles.smallContext}> Mais . . .</Text>
+                    <View style={styles.smallBarra} />
+                  </TouchableOpacity>
                 </View>
               </View>
             </View>
