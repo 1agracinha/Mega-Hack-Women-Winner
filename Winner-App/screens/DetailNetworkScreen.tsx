@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     width: 55,
     height: 5,
-    backgroundColor: Colors.dark.gray,
+    backgroundColor: Colors.light.gray,
     borderRadius: 3,
   },
   barra2: {
