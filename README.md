@@ -8,7 +8,7 @@
 <p align="justify">
   O ConectApp é um aplicativo, desenvolvido durante o Mega Hack Women, que dispõe de uma rede social de nicho e busca estimular a troca de experiências entre mulheres cadastradas na plataforma.
 O ambiente digital também oferecerá conteúdo para capacitar tais mulheres em diversas áreas de atuação. 
-Além de trocar conhecimentos, proporcionamos o empoderamento feminino. A aplicação ainda contará com experiencia gameficada e uma base de dados personalizada contendo duvidas recorrentes entre as empreendedoras, a fim de facilitar o acesso às informações de forma rápida e fácil.
+Além de trocar conhecimentos, proporcionamos o empoderamento feminino. A aplicação ainda contará com experiencia gamificada e uma base de dados personalizada contendo duvidas recorrentes entre as empreendedoras, a fim de facilitar o acesso às informações de forma rápida e fácil.
 </p>
 
 <a name=""></a>
