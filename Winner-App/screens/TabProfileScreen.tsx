@@ -1,10 +1,13 @@
-import * as React from 'react';
-import { StyleSheet, Image } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Image, ScrollView, Modal, Alert, TouchableOpacity } from 'react-native';
 
+import gif from '../assets/images/contruir.gif'
 import CardMotivation from '../components/CardMotivation';
 import { Text, View } from '../components/Themed';
 
 export default function TabProfileScreen() {
+  const [modalVisible, setModalVisible] = useState(false);
+
   return (
     <View style={styles.container}>
 
@@ -26,6 +29,59 @@ export default function TabProfileScreen() {
           Mahatma Gandhi.
         </Text>
       </View>
+
+      <TouchableOpacity
+        style={[styles.openButton, { marginTop: 20, backgroundColor: "#597878", borderColor: "#ddd", borderWidth: 2, }]}
+        onPress={() => {
+          setModalVisible(true);
+        }}
+      >
+        <Text style={[styles.subtitle, { color: "#fff", fontSize: 18 }]}> Saiba mais</Text>
+      </TouchableOpacity>
+
+      {/* Modal de construção */}
+      <Modal
+        animationType="fade"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(!modalVisible);
+        }}
+      >
+        <View style={{ flex: 1, width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', padding: 30 }} >
+          <Text style={[styles.subtitle, { color: "#666", textAlign: 'center' }]}>
+            Estamos trabalhando em mais funcionalidades...
+          </Text>
+
+          <Image
+            source={gif}
+            style={{
+              width: "60%",
+              height: "60%",
+            }} />
+
+          <Text style={[styles.subtitle, { color: "#666", textAlign: "center" }]}>
+            Para mais informações entre em contato por email:
+          </Text>
+
+          <Text style={[styles.title]}>
+            hackwomen.2020@gmail.com
+          </Text>
+
+          <TouchableOpacity
+            style={[styles.openButton, { backgroundColor: "#888" }]}
+            onPress={() => {
+              setModalVisible(!modalVisible);
+            }}
+          >
+            <Text style={[styles.subtitle, { color: '#fff' }]}>Voltar</Text>
+          </TouchableOpacity>
+
+        </View>
+
+
+      </Modal>
+
     </View>
   );
 }
@@ -44,10 +100,24 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontFamily: 'Grandstander'
   },
+  subtitle: {
+    fontSize: 20,
+    fontWeight: '500',
+    fontFamily: 'Grandstander',
+    color: "#666",
+    textAlign: 'center'
+  },
   separator: {
     marginVertical: 30,
     height: 1,
     width: '80%',
+  },
+  openButton: {
+    backgroundColor: "#fff",
+    borderRadius: 10,
+    padding: 10,
+    margin: 5,
+    elevation: 2
   },
   profile: {
     justifyContent: 'center',
@@ -66,5 +136,6 @@ const styles = StyleSheet.create({
     borderColor: "#fff",
     borderWidth: 2,
     borderRadius: 20,
+
   },
 });
