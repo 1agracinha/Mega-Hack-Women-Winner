@@ -25,7 +25,7 @@ Além de trocar conhecimentos, proporcionamos o empoderamento feminino. A aplica
   <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(5).jpg" width="200" /> 
   <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(6).jpg" width="200" />
   <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(7).jpg" width="200" />
-  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(9).jpg" width="200" />
+  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(12).jpg" width="200" />
 </p>
 
 # <a name="saibamais">:cinema: Conheça mais sobre o ConectApp</a>
