@@ -23,9 +23,9 @@ const TabNetworkScreen: React.FC<Props> = ({ navigation }) => {
     {
       key: '1',
       tags: ["Comunicação"],
-      name: "Fernanda Gentily",
+      name: "Fernanda Gentil",
       image: "https://pikwizard.com/photos/woman-using-mobile-phone-near-window--df39295d5760bd890dd836aa616eea56-m.jpg",
-      bio: "Eu sou a Gentily me formei na faculdade de Comunicação Social da PUC-RS em 1998. Começei a trabalhar na TV Gazeta Rio Grande do Sul cobrindo férias de repórteres e,  posteriormente, apresentando telejornal na hora do almoço. Minha trajetòria é longa e acredito que posso contribuir muito em assuntos de comunicação."
+      bio: "Eu sou a Fernanda me formei em Jornalismo da PUC-RJ. Começei a trabalhar na  TV Esporte Interativo. Minha trajetòria é longa e acredito que posso contribuir muito em assuntos de comunicação."
     },
     {
       key: '2',
@@ -140,13 +140,12 @@ const TabNetworkScreen: React.FC<Props> = ({ navigation }) => {
               <View style={[styles.back, { padding: 0, height: 150 }]} >
 
                 <View style={{ backgroundColor: '#ffff' }}>
-                  <Text style={[styles.title, { textAlign: 'center' }]}> Fernanda Gentilly </Text>
+                  <Text style={[styles.title, { textAlign: 'center' }]}> Fernanda Gentil </Text>
                 </View>
 
                 <Text style={[styles.context, { textAlign: 'center', fontSize: 18 }]}>
-                  Eu sou a Gentily me formei na faculdade de Comunicação Social da PUC-RS em 1998.
-                  Começei a trabalhar na TV Gazeta Rio Grande do Sul cobrindo férias de repórteres e,
-                  posteriormente, apresentando telejornal na hora do almoço.
+                  Eu sou a Fernanda me formei em Jornalismo da PUC-RJ.
+                  Começei a trabalhar na  TV Esporte Interativo.
                   Minha trajetòria é longa e acredito que posso contribuir muito em assuntos de comunicação.
                 </Text>
 
@@ -185,8 +184,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    // paddingBottom: 30,
-    marginBottom: 30,
   },
   profile: {
     width: 48,
