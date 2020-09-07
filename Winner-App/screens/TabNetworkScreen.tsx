@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { StyleSheet, ScrollView, SafeAreaView, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
 
-import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import Colors from '../constants/Colors'
 
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../types'
+import { RootStackParamList } from '../types';
+
 type ProfileScreenNavigationProp = StackNavigationProp<
   RootStackParamList,
   'Root'
@@ -44,12 +44,13 @@ const TabNetworkScreen: React.FC<Props> = ({ navigation }) => {
     },
   ])
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <ScrollView>
 
-        <View style={{ paddingHorizontal: 20, paddingTop: 30 }} >
-          <Text style={styles.title}> Essa é nossa rede </Text>
+        <View style={{ paddingHorizontal: 20, paddingTop: 25 }} >
+          <Text style={[styles.title, { textAlign: 'center', fontSize: 18, textTransform: 'uppercase' }]}> Essa é nossa rede </Text>
         </View>
+
         {data.map((person) => (
           <View style={[styles.wrapper, styles.back]} key={person.key}>
 
@@ -79,8 +80,9 @@ const TabNetworkScreen: React.FC<Props> = ({ navigation }) => {
 
           </View>
         ))}
+
       </ScrollView >
-    </SafeAreaView >
+    </View >
   );
 }
 
@@ -107,29 +109,22 @@ const styles = StyleSheet.create({
   },
   wrapper: {
     marginBottom: 8,
-    shadowColor: '#743c7a',
+    shadowColor: '#454545',
     elevation: 2,
+    marginHorizontal: 20,
     shadowOpacity: 0.50,
     shadowRadius: 1.41,
     shadowOffset: {
-      height: 0,
+      height: 2,
       width: 2,
     }
   },
-  barra2: {
-    width: '80%',
-    height: 2.5,
-    backgroundColor: '#e2ddee',
-    borderRadius: 3,
-    alignSelf: 'center'
-  },
   back: {
     backgroundColor: '#fff',
-    marginHorizontal: 20,
     borderRadius: 20,
-    padding: 20,
-    paddingTop: 8,
+    paddingHorizontal: 22,
     marginTop: 15,
+    height: 190,
   },
   row: {
     backgroundColor: '#fff',
@@ -149,6 +144,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: "#fff",
     fontWeight: 'bold',
+    alignSelf: 'center',
     fontFamily: 'Grandstander',
   },
   context: {
@@ -156,6 +152,7 @@ const styles = StyleSheet.create({
     color: "#999",
     fontWeight: '400',
     marginTop: 10,
+    maxHeight: 85,
   },
 });
 
