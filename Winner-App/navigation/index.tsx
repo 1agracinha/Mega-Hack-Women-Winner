@@ -50,10 +50,12 @@ function RootNavigator() {
         name="Category"
         component={CategoryScreen}
         initialParams={{ key: '1', title: "Hoje" }}
+        options={{ headerTitle: "Marketing" }}
       />
       <Stack.Screen
         name="DetailCategory"
         component={DetailCategoryScreen}
+        options={{ headerTitle: "Marketing iniciante" }}
       />
     </Stack.Navigator>
   );

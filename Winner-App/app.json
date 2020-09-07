@@ -5,6 +5,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
+    "description": "ConectApp pra se conectar e empreender justas",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {

@@ -12,7 +12,7 @@ export default function CardMotivation({ path }: { path: string }) {
         <Text
           style={styles.getStartedText}
           lightColor={Colors.light.gray}
-          darkColor={Colors.dark.gray}
+        // darkColor={Colors.dark.gray}
         >
           “Agimos como se conforto e luxo fossem os principais requisitos da vida,
           quando tudo o que precisamos para nos fazer felizes é algo para nos entusiasmar.”

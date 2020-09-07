@@ -11,15 +11,15 @@ export default {
     tabIconSelected: tintColorLight,
     gray: '#d2d3d3'
   },
-  dark: {
-    primary: '#2e4f4c',
-    text: '#F2EFEB',
-    background: '#1a202c',
-    tint: tintColorDark,
-    tabIconDefault: '#b786bb',
-    tabIconSelected: tintColorDark,
-    gray: '#d2d3d3'
-  },
+  // dark: {
+  //   primary: '#2e4f4c',
+  //   text: '#F2EFEB',
+  //   background: '#1a202c',
+  //   tint: tintColorDark,
+  //   tabIconDefault: '#b786bb',
+  //   tabIconSelected: tintColorDark,
+  //   gray: '#d2d3d3'
+  // },
 };
 // Primary #A596f4
 // Primary dark #7369c1

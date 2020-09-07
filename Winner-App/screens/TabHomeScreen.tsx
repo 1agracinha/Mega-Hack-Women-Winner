@@ -20,8 +20,8 @@ export default function TabBookScreen() {
       <View style={styles.getStartedContainer}>
         <Text
           style={styles.getStartedText}
-          lightColor={Colors.light.tint}
-          darkColor={Colors.dark.tint}
+          lightColor={Colors.light.primary}
+        // darkColor={Colors.dark.primary}
         >
           ConectApp te proporsiona conteúdos
           sobre os principais temas relacionados a como abrir
@@ -30,20 +30,28 @@ export default function TabBookScreen() {
         <Text />
         <Text
           style={styles.getStartedText}
-          lightColor={Colors.light.tint}
-          darkColor={Colors.dark.tint}
+          lightColor={Colors.light.primary}
+        // darkColor={Colors.dark.primary}
         >
-          Temos também um time de apoio, composta por pessoas assim como você, empreendedoras
-          que querem mudar o mundo com suas ideias
-          e compartilhar conhecimento é só o começo.
+          Temos também um time de apoio composto por pessoas que assim como você,
+          querem mudar o mundo com suas ideias.
           </Text>
         <Text />
         <Text
           style={styles.getStartedText}
-          lightColor={Colors.light.tint}
-          darkColor={Colors.dark.tint}
+          lightColor={Colors.light.primary}
+        // darkColor={Colors.dark.primary}
         >
           Queremos incentivar o empreendedorismo entre mulheres venha fazer parte dessa corrente.
+          Compartilhar conhecimento é só o começo.
+        </Text>
+        <Text />
+        <Text
+          style={styles.getStartedText}
+          lightColor={Colors.light.primary}
+        // darkColor={Colors.dark.primary}
+        >
+          Compartilhar conhecimento é só o começo.
         </Text>
       </View>
 
@@ -67,17 +75,17 @@ const styles = StyleSheet.create({
     width: '80%',
   },
   getStartedText: {
-    fontSize: 16,
+    fontSize: 15,
     lineHeight: 24,
     textAlign: "left",
   },
   getStartedContainer: {
     alignItems: 'flex-start',
-    padding: 20,
+    padding: 25,
     marginHorizontal: 20,
-    //  backgroundColor: '#f9f9f9',
-    // borderColor: "#fff",
-    // borderWidth: 2,
+    backgroundColor: '#f3f4fa',
+    borderColor: "#fff",
+    borderWidth: 2,
     borderRadius: 20,
   },
 });
