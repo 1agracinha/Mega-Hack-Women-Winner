@@ -17,28 +17,6 @@ interface Props {
   navigation: ProfileScreenNavigationProp;
 };
 
-const data = [
-  { key: 'bigBlock' },
-  { key: 'blockB' },
-  { key: 'blockC' },
-  { key: 'blockD' },
-];
-
-const renderItem = () => (
-  <>
-    <View style={[styles.wrapper]} >
-      <Text style={styles.title}>Topico 1</Text>
-
-    </View>
-    <View>
-      <Text style={styles.title}>Topico 1</Text>
-      <Text style={styles.title}>Topico 1</Text>
-      <View style={styles.barra} />
-    </View>
-    {/* <CardMotivation path="/screens/TabOneScreen.tsx" /> */}
-  </>
-)
-
 const HomeScreen: React.FC<Props> = ({ navigation }) => {
   const [data, setData] = useState([
     {
@@ -132,6 +110,7 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
       image: "https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     },
   ])
+
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
@@ -150,11 +129,9 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
         {/* Categorias disponíveis */}
         {data.map((item) => (
           <View key={item.key}>
-
             <View style={[styles.wrapper, styles.back, { backgroundColor: item.colorCard }]} >
               <TouchableOpacity onPress={() => { navigation.navigate('Category', { key: '199', title: "hoje gg" }) }}>
                 <Text style={styles.title}>{item.title}</Text>
-
                 <Text style={styles.context}>
                   {item.content}
                 </Text>
@@ -174,7 +151,6 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
               </View>
 
               <View style={styles.smallCardView} >
-
                 <View style={[styles.smallCard, {
                   borderColor: item.colorCard,
                   borderWidth: 3
@@ -198,7 +174,6 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
                   <Text style={styles.smallContext}> Mais . . .</Text>
                   <View style={styles.smallBarra} />
                 </View>
-
               </View>
             </View>
           </View>
@@ -221,7 +196,7 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
 const styles = StyleSheet.create({
   wrapper: {
     padding: 20,
-    shadowColor: '#743c7a',
+    shadowColor: '#454545',
     elevation: 4,
     shadowOpacity: 0.50,
     shadowRadius: 1.41,
@@ -243,7 +218,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: 'row',
     padding: 20,
-    paddingBottom: 50,
+    justifyContent: 'space-between'
   },
   bigCardView: {
     display: "flex",
@@ -251,7 +226,6 @@ const styles = StyleSheet.create({
     width: '70%',
     backgroundColor: "#fff",
     marginBottom: 10,
-    marginRight: 10,
     borderRadius: 20,
     maxHeight: 250,
     padding: 20,
@@ -261,7 +235,7 @@ const styles = StyleSheet.create({
   smallCard: {
     backgroundColor: "#fff",
     padding: 10,
-    marginBottom: 10,
+    marginBottom: 8,
     borderRadius: 20,
     height: 70,
     borderColor: "#eee",
@@ -270,7 +244,7 @@ const styles = StyleSheet.create({
   smallCardView: {
     display: "flex",
     flexDirection: 'column',
-    width: '25%',
+    width: '28%',
   },
   barra: {
     marginVertical: 5,

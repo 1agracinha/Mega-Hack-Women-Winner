@@ -47,8 +47,8 @@ const TabNetworkScreen: React.FC<Props> = ({ navigation }) => {
     <View style={styles.container}>
       <ScrollView>
 
-        <View style={{ paddingHorizontal: 20, paddingTop: 30 }} >
-          <Text style={styles.title}> Essa é nossa rede </Text>
+        <View style={{ paddingHorizontal: 20, paddingTop: 25 }} >
+          <Text style={[styles.title, { textAlign: 'center', fontSize: 18, textTransform: 'uppercase' }]}> Essa é nossa rede </Text>
         </View>
 
         {data.map((person) => (
@@ -109,10 +109,9 @@ const styles = StyleSheet.create({
   },
   wrapper: {
     marginBottom: 8,
-    shadowColor: '#9999',
+    shadowColor: '#454545',
     elevation: 2,
     marginHorizontal: 20,
-
     shadowOpacity: 0.50,
     shadowRadius: 1.41,
     shadowOffset: {
@@ -122,7 +121,6 @@ const styles = StyleSheet.create({
   },
   back: {
     backgroundColor: '#fff',
-    //marginHorizontal: 20,
     borderRadius: 20,
     paddingHorizontal: 22,
     marginTop: 15,
@@ -141,7 +139,6 @@ const styles = StyleSheet.create({
     color: Colors.light.primary,
     fontWeight: 'bold',
     fontFamily: 'Grandstander',
-    paddingBottom: 20
   },
   buttonText: {
     fontSize: 18,

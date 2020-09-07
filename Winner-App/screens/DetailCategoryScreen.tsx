@@ -1,13 +1,12 @@
 import * as React from 'react';
+import { Video } from 'expo-av';
 import { StyleSheet, ScrollView, SafeAreaView } from 'react-native';
-// import Video from 'react-native-video';
-import CardMotivation from '../components/CardMotivation';
 import { Text, View } from '../components/Themed';
-import Colors from '../constants/Colors'
+import Colors from '../constants/Colors';
+import MarketVideo from '../assets/videos/Marketing.mp4'
 
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../types';
-import { WebView } from 'react-native-webview';
 
 type ProfileScreenNavigationProp = StackNavigationProp<
   RootStackParamList,
@@ -24,7 +23,7 @@ const DetailCategoryScreen: React.FC<Props> = ({ navigation }) => {
     <ScrollView>
       <SafeAreaView style={styles.container}>
         <View style={[styles.container, { padding: 20 }]} >
-          <Text style={styles.title}> Marketing Digital: O Que É, Como Fazer e Estratégias [Guia 2020] </Text>
+          <Text style={styles.title}> Marketing Digital: O Que É, Como Fazer e Estratégias  </Text>
         </View>
 
         <View style={[styles.container, { paddingHorizontal: 20 }]} >
@@ -41,7 +40,6 @@ const DetailCategoryScreen: React.FC<Props> = ({ navigation }) => {
             Tipo, BASTANTE tempo MESMO. Aproximadamente 100 anos para ser exato.
             Abaixo uma foto do primeiro profissional de marketing digital na história:
           </Text>
-
         </View>
 
         <View style={[styles.back]} >
@@ -52,11 +50,24 @@ const DetailCategoryScreen: React.FC<Props> = ({ navigation }) => {
          </Text>
         </View>
 
-        <WebView
-          style={{ flex: 1 }}
-          javaScriptEnabled={true}
-          source={{ uri: 'https://www.youtube.com/watch?v=im7ct31o35c&ab_channel=Mepoupe%21' }}
+        {/* WebView: video */}
+        <Video
+          //source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }}
+          source={MarketVideo}
+          rate={1.0}
+          volume={1.0}
+          isMuted={true}
+          resizeMode="cover"
+          shouldPlay
+          //isLooping
+          accessibilityComponentType="button"
+          style={{ width: 320, height: 200, alignSelf: "center", borderRadius: 10, margin: 20, marginBottom: 0 }}
         />
+        <View style={[styles.container, { padding: 20 }]} >
+          <Text style={styles.fonteText}>
+            Fonte: Job no Cafofo - Canal do YouTube
+          </Text>
+        </View>
 
         <View style={[styles.container, { padding: 20 }]} >
           <Text style={styles.subtitle}>
@@ -79,77 +90,15 @@ const DetailCategoryScreen: React.FC<Props> = ({ navigation }) => {
 }
 
 const styles = StyleSheet.create({
-  wrapper: {
-    padding: 20,
-    shadowColor: '#A596F4',
-    elevation: 4,
-    shadowOpacity: 0.50,
-    shadowRadius: 1.41,
-    shadowOffset: {
-      height: 1,
-      width: 2,
-    }
-  },
-  wrapper2: {
-    borderColor: '#F2EFEB',
-    borderWidth: 10,
-    padding: 20,
-    borderRadius: 10,
-    backgroundColor: "#fff",
-  },
-  bloco: {
-    display: "flex",
-    flexDirection: 'row',
-    padding: 20,
-  },
-  bigCardView: {
-    display: "flex",
-    flexDirection: 'column',
-    width: '70%',
-    backgroundColor: "#fff",
-    marginBottom: 10,
-    marginRight: 10,
-    borderRadius: 20,
-    maxHeight: 250,
-    padding: 20,
-  },
-  smallCard: {
-    backgroundColor: "#fff",
-    padding: 10,
-    marginBottom: 10,
-    borderRadius: 20,
-    height: 60,
-  },
-  smallCardView: {
-    display: "flex",
-    flexDirection: 'column',
-    width: '25%',
-  },
-  barra: {
-    marginVertical: 5,
-    width: 55,
-    height: 5,
-    backgroundColor: Colors.dark.gray,
-    borderRadius: 3,
-  },
-  barra2: {
-    //marginVertical: 10,
-    width: '80%',
-    height: 2.5,
-    backgroundColor: '#e2ddee',
-    borderRadius: 3,
-    alignSelf: 'center'
-  },
   container: {
     flex: 1,
     backgroundColor: '#fff',
   },
   back: {
-    backgroundColor: '#d2e5f2',
+    backgroundColor: '#ddedeb',
     marginHorizontal: 20,
     borderRadius: 20,
     padding: 20,
-    // marginVertical: 20,
     marginTop: 20,
   },
   title: {
@@ -160,19 +109,14 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 16,
-    // color: "#7369c1",
-    // marginBottom: 10,
     fontWeight: '500',
-    // fontFamily: 'Grandstander',
     lineHeight: 25,
   },
   fonteText: {
     textAlign: 'center',
     fontSize: 14,
     color: "#777",
-    // marginBottom: 10,
     fontWeight: '700',
-    // fontFamily: 'Grandstander',
     lineHeight: 16,
   },
   context: {
@@ -181,12 +125,6 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     marginTop: 10,
     lineHeight: 19,
-    // fontFamily: 'Grandstander',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
   },
 });
 
