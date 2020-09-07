@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Video } from 'expo-av';
 import { StyleSheet, ScrollView, SafeAreaView } from 'react-native';
+
 import { Text, View } from '../components/Themed';
 import Colors from '../constants/Colors';
 import MarketVideo from '../assets/videos/Marketing.mp4'
@@ -19,7 +20,6 @@ type Props = {
 
 const DetailCategoryScreen: React.FC<Props> = ({ navigation }) => {
   return (
-
     <ScrollView>
       <SafeAreaView style={styles.container}>
         <View style={[styles.container, { padding: 20 }]} >
@@ -51,18 +51,25 @@ const DetailCategoryScreen: React.FC<Props> = ({ navigation }) => {
         </View>
 
         {/* WebView: video */}
+        <View style={[styles.container, { paddingHorizontal: 30, paddingTop: 20 }]} >
+          <Text style={[styles.context, { fontSize: 20 }]}>
+            Vídeo
+          </Text>
+        </View>
         <Video
           //source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }}
           source={MarketVideo}
           rate={1.0}
           volume={1.0}
-          isMuted={true}
-          resizeMode="cover"
-          shouldPlay
-          //isLooping
+          isMuted={false}
+          resizeMode="stretch"
+          // shouldPlay
+          // isLooping
+          useNativeControls
           accessibilityComponentType="button"
           style={{ width: 320, height: 200, alignSelf: "center", borderRadius: 10, margin: 20, marginBottom: 0 }}
         />
+
         <View style={[styles.container, { padding: 20 }]} >
           <Text style={styles.fonteText}>
             Fonte: Job no Cafofo - Canal do YouTube
@@ -77,6 +84,10 @@ const DetailCategoryScreen: React.FC<Props> = ({ navigation }) => {
           </Text>
         </View>
 
+
+        {/* Mais em Audio */}
+
+
         <View style={[styles.container, { padding: 20 }]} >
           <Text style={styles.fonteText}>
             Fonte: https://neilpatel.com/br/como-fazer-marketing-digital-o-guia-passo-a-passo/
@@ -85,7 +96,6 @@ const DetailCategoryScreen: React.FC<Props> = ({ navigation }) => {
 
       </SafeAreaView>
     </ScrollView >
-
   );
 }
 

@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { StyleSheet, ScrollView, SafeAreaView, TouchableOpacity } from 'react-native';
 
-import CardMotivation from '../components/CardMotivation';
 import { Text, View } from '../components/Themed';
 import Colors from '../constants/Colors';
 
 import { RouteProp } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../types'
+import { RootStackParamList } from '../types';
+
 type ProfileScreenNavigationProp = StackNavigationProp<
   RootStackParamList,
   'Root'

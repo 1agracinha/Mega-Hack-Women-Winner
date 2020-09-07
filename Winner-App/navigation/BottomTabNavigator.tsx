@@ -4,6 +4,9 @@ import { Entypo } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
+import { Image } from 'react-native';
+
+import logo from '../assets/images/icon.png';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
@@ -37,7 +40,7 @@ export default function BottomTabNavigator() {
           tabBarIcon: ({ color }) => (
             <HomeIcon name="home" color={color} />
           ),
-          title: 'Inicio'
+          title: 'Inicio',
         }}
       />
       <BottomTab.Screen
@@ -99,7 +102,18 @@ function TabNetworkNavigator() {
       <TabNetworkStack.Screen
         name="TabNetworkScreen"
         component={TabNetworkScreen}
-        options={{ headerTitle: 'Rede' }}
+        options={{
+          headerTitleAlign: 'center', headerTitle: 'Rede', headerTintColor: '#7368C1',
+          headerLeft: () => (
+            <Image
+              source={logo}
+              style={{
+                width: 80,
+                height: 105,
+                borderRadius: 22
+              }} />
+          )
+        }}
       />
     </TabNetworkStack.Navigator>
   );
@@ -113,7 +127,18 @@ function TabProfileNavigator() {
       <TabProfileStack.Screen
         name="TabProfileScreen"
         component={TabProfileScreen}
-        options={{ headerTitle: 'Perfil' }}
+        options={{
+          headerTitleAlign: 'center', headerTitle: 'Perfil', headerTintColor: '#7368C1',
+          headerLeft: () => (
+            <Image
+              source={logo}
+              style={{
+                width: 80,
+                height: 105,
+                borderRadius: 22
+              }} />
+          )
+        }}
       />
     </TabProfileStack.Navigator>
   );
@@ -127,7 +152,19 @@ function TabHomeNavigator() {
       <TabHomeStack.Screen
         name="TabHomeScreen"
         component={TabHomeScreen}
-        options={{ headerTitle: '' }}
+        options={{
+          headerTitleAlign: 'center', headerTitle: '', headerTintColor: '#7368C1',
+          headerShown: false,
+          headerLeft: () => (
+            <Image
+              source={logo}
+              style={{
+                width: 80,
+                height: 105,
+                borderRadius: 22
+              }} />
+          )
+        }}
       />
     </TabHomeStack.Navigator>
   );
@@ -141,7 +178,18 @@ function TabBookNavigator() {
       <TabBookStack.Screen
         name="TabBookScreen"
         component={TabBookScreen}
-        options={{ headerTitle: 'Aprenda Mais' }}
+        options={{
+          headerTitleAlign: 'center', headerTitle: 'Conteúdo', headerTintColor: '#7368C1',
+          headerLeft: () => (
+            <Image
+              source={logo}
+              style={{
+                width: 80,
+                height: 105,
+                borderRadius: 22
+              }} />
+          )
+        }}
       />
     </TabBookStack.Navigator>
   );
