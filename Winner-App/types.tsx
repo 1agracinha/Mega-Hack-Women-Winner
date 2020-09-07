@@ -3,6 +3,7 @@ export type RootStackParamList = {
   NotFound: undefined;
   Category: { key: string, title: string };
   DetailCategory: undefined;
+  Login: undefined;
 };
 
 export type BottomTabParamList = {
@@ -27,4 +28,5 @@ export type TabHomeParamList = {
 export type TabProfileParamList = {
   TabProfileScreen: undefined;
 };
+
 

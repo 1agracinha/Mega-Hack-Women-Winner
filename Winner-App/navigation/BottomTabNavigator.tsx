@@ -6,7 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 import { Image } from 'react-native';
 
-import logo from '../assets/images/icon.png';
+import logo from '../assets/images/iconT.png';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';

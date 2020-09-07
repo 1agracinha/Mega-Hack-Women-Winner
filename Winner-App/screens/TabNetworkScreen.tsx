@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, ScrollView, TouchableOpacity, Image, Modal, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { Picker } from '@react-native-community/picker';
 
 import { Text, View } from '../components/Themed';
 import Colors from '../constants/Colors'
@@ -22,9 +23,9 @@ const TabNetworkScreen: React.FC<Props> = ({ navigation }) => {
     {
       key: '1',
       tags: ["Comunicação"],
-      name: "Fernanda Gentily",
+      name: "Fernanda Gentil",
       image: "https://pikwizard.com/photos/woman-using-mobile-phone-near-window--df39295d5760bd890dd836aa616eea56-m.jpg",
-      bio: "Eu sou a Gentily me formei na faculdade de Comunicação Social da PUC-RS em 1998. Começei a trabalhar na TV Gazeta Rio Grande do Sul cobrindo férias de repórteres e,  posteriormente, apresentando telejornal na hora do almoço. Minha trajetòria é longa e acredito que posso contribuir muito em assuntos de comunicação."
+      bio: "Eu sou a Fernanda me formei em Jornalismo da PUC-RJ. Começei a trabalhar na  TV Esporte Interativo. Minha trajetòria é longa e acredito que posso contribuir muito em assuntos de comunicação."
     },
     {
       key: '2',
@@ -49,55 +50,81 @@ const TabNetworkScreen: React.FC<Props> = ({ navigation }) => {
     },
   ])
   const [modalVisible, setModalVisible] = useState(false);
-
+  const [category, setCategory] = useState<React.ReactText>("Todas")
   return (
     <View style={styles.container}>
       <ScrollView>
 
-        {/* <View style={{ paddingHorizontal: 20, paddingTop: 25 }} >
-          <Text style={[styles.title, { textAlign: 'center', fontSize: 18, textTransform: 'uppercase' }]}> Essa é nossa rede </Text>
-        </View> */}
+        <View style={{ paddingHorizontal: 20, paddingTop: 25 }} >
+          <Text style={[styles.title, { color: '#7368C1', textAlign: 'left', fontSize: 18, textTransform: "capitalize" }]}> Busque por assunto de interese </Text>
 
-        {data.map((person) => (
-          <View style={[styles.wrapper, styles.back]} key={person.key}>
+          <Picker
+            selectedValue={category}
+            style={{ alignSelf: 'center', paddingHorizontal: 20, paddingTop: 25, height: 50, width: 300 }}
+            onValueChange={(itemValue, itemIndex) =>
+              setCategory(itemValue)
+            }>
+            <Picker.Item label="Todas" value="Todas" />
+            <Picker.Item label="Tecnologia" value="Tecnologia" />
+            <Picker.Item label="Formalização" value="Formalização" />
+            <Picker.Item label="Marketing" value="Marketing" />
+            <Picker.Item label="Contabilidade" value="Contabilidade" />
+            <Picker.Item label="Juridico" value="Juridico" />
+          </Picker>
 
-            <View style={[styles.row]}>
-              <View style={styles.profile}>
-                <Image
-                  source={{
-                    uri: person.image,
-                  }}
-                  style={{
-                    width: 48,
-                    height: 48,
-                    borderRadius: 22,
-                  }} />
-              </View>
+        </View>
 
-              <View style={{ marginLeft: 5, backgroundColor: '#ffff' }}>
-                <Text style={styles.title}> {person.name} </Text>
-                <View style={[{ flexDirection: 'row', backgroundColor: '#ffff' }]}>
-                  {person.tags.map((tag) => (
-                    <Text key={tag} style={[styles.tag, { backgroundColor: '#e2ddee', marginRight: 5, marginTop: 2, padding: 1 }]}> {tag} </Text>
-                  ))}
+        {data.map((person) => {
+          if (category === person.tags[0] || category === "Todas") {
+            return (
+              <View style={[styles.wrapper, styles.back, {}]} key={person.key}>
+                <View style={[styles.row]}>
+                  <View style={styles.profile}>
+                    <Image
+                      source={{
+                        uri: person.image,
+                      }}
+                      style={{
+                        width: 48,
+                        height: 48,
+                        borderRadius: 22,
+                      }} />
+                  </View>
+
+                  <View style={{ marginLeft: 5, backgroundColor: '#ffff' }}>
+                    <Text style={styles.title}> {person.name} </Text>
+                    <View style={[{ flexDirection: 'row', backgroundColor: '#ffff' }]}>
+                      {person.tags.map((tag) => (
+                        <Text key={tag} style={[styles.tag, { backgroundColor: '#e2ddee', marginRight: 5, marginTop: 2, padding: 1 }]}> {tag} </Text>
+                      ))}
+                    </View>
+
+                  </View>
+
+                  <TouchableOpacity style={styles.touchArea} onPress={() => setModalVisible(true)}>
+                    <View style={styles.add}>
+                      <Ionicons size={40} name="ios-add-circle" color="#597878" />
+                    </View>
+
+                  </TouchableOpacity>
                 </View>
 
+                <Text style={styles.context}>
+                  {person.bio}
+                </Text>
+
               </View>
-
-              <TouchableOpacity style={styles.touchArea} onPress={() => setModalVisible(true)}>
-                <View style={styles.add}>
-                  <Ionicons size={40} name="ios-add-circle" color="#597878" />
-                </View>
-
-              </TouchableOpacity>
-            </View>
-
-            <Text style={styles.context}>
-              {person.bio}
-            </Text>
-
-          </View>
-        ))}
+            )
+          }
+          // else {
+          //   <View>
+          //     <Text style={styles.title}>
+          //       Não temos nenhuma contribuinte nesse tópico, gostaria de nos ajudar?
+          //       Chame as amigas pra fazer parte e nos ajude a trazer ainda mais mulheres empoderadas para a rede
+          //     </Text>
+          //   </View>
+          // }
+        })}
 
         {/* Modal com detalhamento */}
         <Modal
@@ -113,13 +140,12 @@ const TabNetworkScreen: React.FC<Props> = ({ navigation }) => {
               <View style={[styles.back, { padding: 0, height: 150 }]} >
 
                 <View style={{ backgroundColor: '#ffff' }}>
-                  <Text style={[styles.title, { textAlign: 'center' }]}> Fernanda Gentilly </Text>
+                  <Text style={[styles.title, { textAlign: 'center' }]}> Fernanda Gentil </Text>
                 </View>
 
                 <Text style={[styles.context, { textAlign: 'center', fontSize: 18 }]}>
-                  Eu sou a Gentily me formei na faculdade de Comunicação Social da PUC-RS em 1998.
-                  Começei a trabalhar na TV Gazeta Rio Grande do Sul cobrindo férias de repórteres e,
-                  posteriormente, apresentando telejornal na hora do almoço.
+                  Eu sou a Fernanda me formei em Jornalismo da PUC-RJ.
+                  Começei a trabalhar na  TV Esporte Interativo.
                   Minha trajetòria é longa e acredito que posso contribuir muito em assuntos de comunicação.
                 </Text>
 
@@ -158,8 +184,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    // paddingBottom: 30,
-    marginBottom: 30,
   },
   profile: {
     width: 48,
