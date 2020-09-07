@@ -14,26 +14,26 @@ Além de trocar conhecimentos, proporcionamos o empoderamento feminino. A aplica
 <a name=""></a>
 # <a name="interface">:iphone:Nossa Interface</a>
 <p float="left">
-  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(1).jpeg" width="200"/>
-  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(3).jpeg" width="200" />
-  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(4).jpeg" width="200" />
-  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(2).jpeg" width="200" /> 
+  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(1).jpg" width="200"/>
+  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(3).jpg" width="200" />
+  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(4).jpg" width="200" />
+  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(2).jpg" width="200" /> 
 </p>
 
   ---
 <p float="left">
-  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(5).jpeg" width="200" /> 
-  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(6).jpeg" width="200" />
-  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(7).jpeg" width="200" />
-  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(9).jpeg" width="200" />
+  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(5).jpg" width="200" /> 
+  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(6).jpg" width="200" />
+  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(7).jpg" width="200" />
+  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(9).jpg" width="200" />
 </p>
 
-# <a name="saibamais">:cinema: Conheça mais sobre o ConnectApp</a>
+# <a name="saibamais">:cinema: Conheça mais sobre o ConectApp</a>
 
 <table>
 <tr>
   <td>
-    <a href="https://www.youtube.com/watch?v=69CA9EEX1bs" target="_blank"><img src="https://img.youtube.com/vi/69CA9EEX1bs/0.jpg" alt="Vídeo PITCH" width="240" height="180" border="10" /></a>
+    <a href="https://www.youtube.com/watch?v=jiTghYG7UMs&feature=youtu.be" target="_blank"><img src="https://img.youtube.com/vi/jiTghYG7UMs/0.jpg" alt="Vídeo PITCH" width="240" height="180" border="10" /></a>
   </td>  
   <td>
     <a href="https://www.youtube.com/watch?v=69CA9EEX1bs" target="_blank"><img src="https://img.youtube.com/vi/69CA9EEX1bs/0.jpg" alt="Vídeo Aplicação" width="240" height="180" border="10" /></a>
@@ -49,8 +49,8 @@ Além de trocar conhecimentos, proporcionamos o empoderamento feminino. A aplica
 > - [x] Página de Network
 > - [x] Página de Categorias
 > - [x] Página de Conteúdos
-> - [ ] #
-> - [ ] #
+> - [x] Página de Sub Conteúdos
+> - [x] Página de Saiba Mais
 
 
 # <a name="instalacao">:gear: Instalação</a>
@@ -80,7 +80,6 @@ Além de trocar conhecimentos, proporcionamos o empoderamento feminino. A aplica
 # <a name="tecnologias">:woman_technologist: Tecnologias Utilizadas</a>
 > - React Native 
 > - TypeScript
-> - Firebase
 > - Expo
 > - Git e GitHub
 > - Gerenciador de Pacotes do Node (npm)
