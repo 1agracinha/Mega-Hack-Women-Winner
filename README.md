@@ -78,7 +78,7 @@ Além de trocar conhecimentos, proporcionamos o empoderamento feminino. A aplica
 > **O aplicativo roda tanto em Android, quanto em IOS, porém, os testes foram feitos apenas para Android!**
 > 1. Baixe o aplicativo do Expo em sua loja de aplicativos;
 > 2. Aqui vc pode seguir 2 caminhos:
-> > 1. Acessar o site do [Expo](https://expo.io/@gislainehjessica/Winner) referente ao ConnectaApp e escanear o QR Code com o aplicativo do Expo ou
+> > 1. Acessar o site do [Expo](https://expo.io/@gislainehjessica/Winner) referente ao ConnectApp e escanear o QR Code com o aplicativo do Expo ou
 > > 2. Após a [instalação](#instalacao), em seu terminal, você deve executar ```expo start``` e escanear, com o aplicativo do expo, o QR Code exibido no terminal ou na página aberta em seu navegador.
 2. **Acessando o app pelo navegador:**
 > **Esse método não proporciona a mesma experiência que emular o app em um aparelho móvel!**
