@@ -14,18 +14,18 @@ Além de trocar conhecimentos, proporcionamos o empoderamento feminino. A aplica
 <a name=""></a>
 # <a name="interface">:iphone:Nossa Interface</a>
 <p float="left">
-  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(1).jpg" width="200"/>
-  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(3).jpg" width="200" />
-  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(4).jpg" width="200" />
-  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(2).jpg" width="200" /> 
+  <img src="https://github.com/gislainejessica/Mega-Hack-Women-Winner/blob/master/images/mhw%20(1).jpg" width="200"/>
+  <img src="https://github.com/gislainejessica/Mega-Hack-Women-Winner/blob/master/mhw%20(3).jpg" width="200" />
+  <img src="https://github.com/gislainejessica/Mega-Hack-Women-Winner/blob/master/mhw%20(4).jpg" width="200" />
+  <img src="https://github.com/gislainejessica/Mega-Hack-Women-Winner/blob/master/mhw%20(2).jpg" width="200" /> 
 </p>
 
   ---
 <p float="left">
-  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(5).jpg" width="200" /> 
-  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(6).jpg" width="200" />
-  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(7).jpg" width="200" />
-  <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/mhw%20(12).jpg" width="200" />
+  <img src="https://github.com/gislainejessica/Mega-Hack-Women-Winner/blob/master/mhw%20(5).jpg" width="200" /> 
+  <img src="https://github.com/gislainejessica/Mega-Hack-Women-Winner/blob/master/mhw%20(6).jpg" width="200" />
+  <img src="https://github.com/gislainejessica/Mega-Hack-Women-Winner/blob/master/mhw%20(7).jpg" width="200" />
+  <img src="https://github.com/gislainejessica/Mega-Hack-Women-Winner/blob/master/mhw%20(12).jpg" width="200" />
 </p>
 
 # <a name="saibamais">:cinema: Conheça mais sobre o ConectApp</a>
