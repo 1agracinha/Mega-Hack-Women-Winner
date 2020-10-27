@@ -1,4 +1,4 @@
-# <img src="https://github.com/1agracinha/winner-megahackwomen/blob/master/images/connectapp2.svg" alt="logo ConectaApp">
+# <img src="https://github.com/1agracinha/Mega-Hack-Women-Winner/blob/master/images/connectapp2.svg" alt="logo ConectaApp">
 
 | | | | | | | |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
